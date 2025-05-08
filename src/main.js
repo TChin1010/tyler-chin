@@ -95,6 +95,7 @@ function createStars(dist1, dist2) {
     const star = new THREE.Mesh(geoStar, mesh);
     star.position.set(x, y, z);
     layer1.add(star);
+    stars.push(star)
     
 }
 /**
@@ -134,7 +135,7 @@ function setDirectionalLight(light) {
     }
 
     // Update moon phase when page loaded
-    document.querySelector('#moon').innerHTML = "Today we have a " + phase.toLowerCase() + " moon";
+    // document.querySelector('#moon').innerHTML = "Today we have a " + phase.toLowerCase() + " moon";
     
 }
 
@@ -218,7 +219,7 @@ camera2.rotateX(Math.PI);
 camera3.rotateX(Math.PI);
 
 window.addEventListener("resize", () => { // For when the window has to resize
-    stars.forEach(star =>  star.position.x = star.position.x / camera.aspect);
+    stars.forEach(star =>  star.position.x = star.position.x / camera2.aspect);
     camera1.aspect = window.innerWidth / window.innerHeight;
     camera1.updateProjectionMatrix();
 
@@ -230,7 +231,8 @@ window.addEventListener("resize", () => { // For when the window has to resize
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    stars.forEach(star =>  star.position.x = star.position.x * camera.aspect);
+    stars.forEach(star =>  star.position.x = star.position.x * camera2.aspect);
+
     
 })
 
