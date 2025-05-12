@@ -11,6 +11,8 @@
     </head>
     <body>
         <canvas id="bg"></canvas>
+        <script type="module" src="./src/main.js"></script>
+
         <header id="navbar">
             <a id="homeLogo">Tyler Chin</a>
             <nav>
@@ -21,18 +23,32 @@
                 <a href="#contact">Contact Me</a>
             </nav>
         </header>
-        <div id="sidebar">
-            <nav>
-                <a id="sidebarLogo">Tyler Chin</a>
-                <a href="#home">Home</a>
-                <a href="#about">About Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#contact me">Contact Me</a>
-            </nav>
+        <input type="checkbox" id="sidebarActive" hidden>
+        <div id="hamburgerIcon" onclick="document.getElementById('sidebarActive').checked = 
+        !document.getElementById('sidebarActive').checked">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="sidebar" class="open">
+            <div id="extraSpace" onclick="document.getElementById('sidebarActive').checked = 
+            !document.getElementById('sidebarActive').checked"></div>
+            <a id="sidebarName">Tyler Chin</a>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact me">Contact Me</a>
+            <a id="closeIcon" onclick="document.getElementById('sidebarActive').checked = 
+            !document.getElementById('sidebarActive').checked">Exit</a>
         </div>
         <main>
             <div class = "container" id="home">
+                <p id="scroll"> Scroll! </p>
+                <p id="moon">Today we have a </p> 
+                <p id="location">Toronto, Canada</p>
+            </div>
+            <div class = "transition">
             </div>
             <div class = "container" id="about">
             </div>
@@ -43,7 +59,5 @@
             <div class = "container" id="contact me">
             </div>
         </main> 
-        <script type="module" src="./src/main.js"></script>
-        <script type="module" src="./src/functionaility.js"></script>
     </body>
 </html>

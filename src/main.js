@@ -135,7 +135,7 @@ function setDirectionalLight(light) {
     }
 
     // Update moon phase when page loaded
-    // document.querySelector('#moon').innerHTML = "Today we have a " + phase.toLowerCase() + " moon";
+    document.querySelector('#moon').innerHTML = "Today we have a " + phase.toLowerCase() + " moon";
     
 }
 
@@ -179,13 +179,12 @@ function createShootingStar() {
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-// add big spinning sphere
+// add a big moon
 const geoSphere = new THREE.SphereGeometry(16, 32, 32);
 const meshStripes = new THREE.MeshStandardMaterial({ color: 0xc2c2d6 });
 const moon = new THREE.Mesh(geoSphere, meshStripes);
 renderer.autoClear = false;
 
-// animationUpdate.push(() => { moon.rotation.x += 0.001; moon.rotation.y += 0.001; })
 moon.position.set(0, 0, 50)
 layer3.add(moon);
 
@@ -241,8 +240,8 @@ window.addEventListener("resize", () => { // For when the window has to resize
  */
 const shootingStarTimer = () => setTimeout(() => {
     shootingStarTimer();
-    Array(THREE.MathUtils.randInt(1, 3)).fill().forEach(createShootingStar);
-}, 1500);
+    Array(THREE.MathUtils.randInt(2, 4)).fill().forEach(createShootingStar);
+}, 1250);
 
 shootingStarTimer();
 
