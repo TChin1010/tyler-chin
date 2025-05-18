@@ -23,7 +23,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
 }
 
 body::-webkit-scrollbar  {
@@ -56,13 +56,12 @@ header nav a {
 }
 
 header a {
-    padding: 15px;
+    padding: 5px;
     color: white;
     font-family: "roboto";
     font-size: 30px;
     font-weight: 700;
     text-decoration: none;
-
 }
 
 header #homeLogo {
@@ -74,7 +73,7 @@ header #homeLogo {
 }
 
 header nav a:hover{
-    text-decoration: underline;
+    border-bottom: 7px solid white;
 }
 
 #sidebar nav a:hover{
@@ -91,59 +90,153 @@ main {
     left: 0;
     font-family: fantasy;
     font-family: "Roboto";
+    font-size: 30px;
+    font-weight: 700;
     color:white;
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    height: 600%;
-    width: 100%;
-    align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
-    box-sizing: border-box;
-    
 }
 
 .container {
-    height: 96%;
+    min-height: 100vh;
     width: 100%;
     display: grid;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+}
+
+.container #home {
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: repeat(12, 1fr);
-    font-weight: 700;
-    font-size: 30px;
-    align-items: end;
 }
-
-.transition {
-    height: 100%;
-    width: 100%;
-}
-
-
-#home #location {
-    margin: 0;
-    padding: 0;
-    grid-row: 11/13;
-    grid-column: 7/13;
-    text-align: right;
-}
-
-#home #moon {
-    margin: 0;
-    padding: 0;
-    grid-row: 11/13;
-    grid-column: 1/7;
-}
-
-#home #scroll {
-    margin: 0;
-    padding: 0;
-    white-space: pre;
-    grid-row: 2/6;
-    grid-column: 1/13;
+#scroll {
     text-align: center;
     align-self: center;
-    font-size: 80px;
+    padding: 2%;
+    font-size: 70px;
+    grid-column: 1/3;
+}
+
+#moon {
+    align-self: end;
+    grid-row: 3;
+    padding: 2%;
+}
+
+#location {
+    text-align: right;
+    align-self: end;
+    padding: 2%;
+    grid-row: 3;
+}
+
+
+#transition {
+    height: 100vh;
+}
+
+#about {
+    grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+    grid-template-rows: 1fr
+}
+
+#media {
+    padding-bottom: 13%;
+    height: 550px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-self: center;
+    align-self: center;
+}
+
+#impression {
+    margin: 0;
+    align-self: end;
+    text-align: center;
+    font-size: 70px;
+}
+
+#selfie {
+    height: 550px;
+    width: 500px;
+    background-color: white;
+    
+}
+
+#description {
+    padding-right: 15%;
+    padding-left: 15%;
+    align-self: center;
+    text-align: center;
+}
+
+#projects {
+    grid-template-rows: auto auto 1fr;
+}
+
+
+#projects p {
+    padding-left: 5%;
+}
+
+#check {
+    margin: 0;
+    font-size: 70px;
+}
+
+#making {
+    margin-top: 0;
+    align-self: flex-start;
+}
+
+
+.projectContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: repeat(auto-fit, 350px);
+    gap: 40px;
+    width: 90%;
+    min-height: 100%;
+    place-self: center;
+    align-self: end;
+    font-size: 20px;
+    background-color: #1f1b24;
+    color: white;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    border: 10px solid white;
+    border-radius: 10px 10px 10px 10px;
+    min-height: 300px;
+
+    padding: 4%;
+}
+
+.project img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    border: 9px solid white;
+    place-self: center;
+
+}
+
+.project a {
+    min-height: 50px;
+    grid-row: 3;
+    background-color: white;
+    color: #1f1b24;
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    align-self: end;
+    text-decoration: none;
+    align-content: center;
+
 }
 
 @media(max-width: 1200px) {
@@ -172,7 +265,6 @@ main {
     #sidebar a {
         display: block;
         padding: 15px;
-
         background-color: white;
         color: #1f1b24;
         font-family: "roboto";
@@ -187,6 +279,8 @@ main {
     }
 
     #extraSpace {
+        border: 1px solid red;
+        display: none;
         position: fixed;
         top: 0;
         right: 0;
@@ -235,6 +329,7 @@ main {
 
     #sidebar #closeIcon {
         color: red;
+        cursor: pointer;
     }
 
     #sidebar #closeIcon:hover {
@@ -247,6 +342,10 @@ main {
 
     #sidebarActive:checked ~ #hamburgerIcon {
         display: none;
+    }
+
+    #sidebarActive:checked ~ #sidebar #extraSpace {
+        display: block;
     }
 
     #sidebar #sidebarName:hover {

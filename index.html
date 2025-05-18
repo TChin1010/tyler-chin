@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -16,10 +16,9 @@
         <header id="navbar">
             <a id="homeLogo">Tyler Chin</a>
             <nav>
-                <a href="#home">Home</a>
+                <a href="#front">Home</a>
                 <a href="#about">About Me</a>
                 <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
                 <a href="#contact">Contact Me</a>
             </nav>
         </header>
@@ -32,31 +31,93 @@
         </div>
         <div id="sidebar" class="open">
             <div id="extraSpace" onclick="document.getElementById('sidebarActive').checked = 
-            !document.getElementById('sidebarActive').checked"></div>
+        !document.getElementById('sidebarActive').checked"></div>
             <a id="sidebarName">Tyler Chin</a>
             <a href="#home">Home</a>
             <a href="#about">About Me</a>
             <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact me">Contact Me</a>
+            <a href="#contact">Contact Me</a>
             <a id="closeIcon" onclick="document.getElementById('sidebarActive').checked = 
             !document.getElementById('sidebarActive').checked">Exit</a>
         </div>
-        <main>
+        <main id="front">
             <div class = "container" id="home">
                 <p id="scroll"> Scroll! </p>
                 <p id="moon">Today we have a </p> 
                 <p id="location">Toronto, Canada</p>
             </div>
-            <div class = "transition">
+            <div id="transition">
             </div>
             <div class = "container" id="about">
+                <div id=media>  
+                    <p id="impression">
+                        Thats me!
+                    </p>
+                    <div id="selfie">
+
+                    </div>
+                </div>
+                <p id="description">
+                    Hello, I am Tyler and welcome to my page. I enjoy the outdoors and connecting with others!
+                    Currently studying computer sciecne at UofT!
+                    I am currently looking for an intership that begins during or after fall 2025. Please
+                    feel free to contact me here and view my resume here.
+
+                </p>
             </div>
             <div class = "container" id="projects">
+                <p id="check">Check these out...</p>
+                <p id="making">I love making things and here are a few of them for you to see!</p>
+                <div class="projectContainer" id="project">
+                    <div class="project">
+                        <img src="./public/placeholder.png">
+                        <desc>The website your viewing currently is my portfolio! You can learn more about it here.</desc>
+                        <a href="https://github.com/TChin1010/tyler-chin" target="_blank">View More</a>
+                    </div>
+                    <div class="project">
+                        <img src="./public/placeholder.png">
+                        <desc>TBD...</desc>
+                        <a href="#">View More</a>
+                    </div>
+                      <div class="project">
+                        <img src="./public/placeholder.png">
+                        <desc>TBD...</desc>
+                        <a href="#">View More</a>
+                    </div>
+                    <div class="project">
+                        <img src="./public/placeholder.png">
+                        <desc>TBD...</desc>
+                        <a href="#">View More</a>
+                    </div>
+                    <div class="project">
+                        <img src="./public/placeholder.png">
+                        <desc>TBD...</desc>
+                        <a href="#">View More</a>
+                    </div>
+                    <div class="project">
+                        <img src="./public/placeholder.png">
+                        <desc>TBD...</desc>
+                        <a href="#">View More</a>
+                    </div>
+                      <div class="project">
+                        <img src="./public/placeholder.png">
+                        <desc>TBD...</desc>
+                        <a href="#">View More</a>
+                    </div>
+                    <div class="project">
+                        <img src="./public/placeholder.png">
+                        <desc>TBD...</desc>
+                        <a href="#">View More</a>
+                    </div>
+                    <div class="project">
+                        <img src="./public/placeholder.png">
+                        <desc>TBD...</desc>
+                        <a href="#">View More</a>
+                    </div>
+                </div>
             </div>
-            <div class = "container" id="education">
-            </div>
-            <div class = "container" id="contact me">
+
+            <div class = "container" id="contact">
             </div>
         </main> 
     </body>

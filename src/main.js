@@ -49,7 +49,7 @@ function moveCamera() {
         z = t * 50 / moonTransition; // Moon position / transition
     } else if (moonTransition <= t && t < spaceTransition) {
         z = (19/26) * t + 50 - (4750/13);
-    } else {
+    } else if (spaceTransition <= t){
         z = 1000;
     }
 
