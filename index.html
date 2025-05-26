@@ -12,6 +12,17 @@
     <body>
         <canvas id="bg"></canvas>
         <script type="module" src="./src/main.js"></script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "D0BXrY6B3kBtVcjkw",
+            });
+        })();
+        </script>
+
 
         <header id="navbar">
             <a id="homeLogo">Tyler Chin</a>
@@ -53,15 +64,13 @@
                     <p id="impression">
                         Thats me!
                     </p>
-                    <div id="selfie">
-
-                    </div>
+                    <div id="selfie"></div>
                 </div>
                 <p id="description">
                     Hello, I am Tyler and welcome to my page. I enjoy the outdoors and connecting with others!
                     Currently studying computer sciecne at UofT!
                     I am currently looking for an intership that begins during or after fall 2025. Please
-                    feel free to contact me here and view my resume here.
+                    feel free to contact me <a href="#contact">here</a> and view my resume <a href="/Resume.pdf" download="My_Resume.pdf">here</a>.
 
                 </p>
             </div>
@@ -70,55 +79,64 @@
                 <p id="making">I love making things and here are a few of them for you to see!</p>
                 <div class="projectContainer" id="project">
                     <div class="project">
-                        <img src="./public/placeholder.png">
+                        <img src="/placeholder.png">
                         <desc>The website your viewing currently is my portfolio! You can learn more about it here.</desc>
                         <a href="https://github.com/TChin1010/tyler-chin" target="_blank">View More</a>
                     </div>
                     <div class="project">
-                        <img src="./public/placeholder.png">
+                        <img src="/placeholder.png">
                         <desc>TBD...</desc>
                         <a href="#">View More</a>
                     </div>
                       <div class="project">
-                        <img src="./public/placeholder.png">
+                        <img src="/placeholder.png">
                         <desc>TBD...</desc>
                         <a href="#">View More</a>
                     </div>
                     <div class="project">
-                        <img src="./public/placeholder.png">
+                        <img src="/placeholder.png">
                         <desc>TBD...</desc>
                         <a href="#">View More</a>
                     </div>
                     <div class="project">
-                        <img src="./public/placeholder.png">
+                        <img src="/placeholder.png">
                         <desc>TBD...</desc>
                         <a href="#">View More</a>
                     </div>
                     <div class="project">
-                        <img src="./public/placeholder.png">
+                        <img src="/placeholder.png">
                         <desc>TBD...</desc>
                         <a href="#">View More</a>
                     </div>
                       <div class="project">
-                        <img src="./public/placeholder.png">
+                        <img src="/placeholder.png">
                         <desc>TBD...</desc>
                         <a href="#">View More</a>
                     </div>
                     <div class="project">
-                        <img src="./public/placeholder.png">
+                        <img src="/placeholder.png">
                         <desc>TBD...</desc>
                         <a href="#">View More</a>
                     </div>
                     <div class="project">
-                        <img src="./public/placeholder.png">
+                        <img src="/placeholder.png">
                         <desc>TBD...</desc>
                         <a href="#">View More</a>
                     </div>
                 </div>
             </div>
-
             <div class = "container" id="contact">
+                <p>Get to know me!</p>
+                <div id="contactBox">
+                    <form id="emailSubmit">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <textarea type="text" class="required-text" name="message" placeholder="Leave a Message :)" rows="3" required></textarea>
+                        <button type="submit" onclick="sendEmail()" id="send">Send</button>
+                    </form>
+                </div>
             </div>
         </main> 
+        <script src="./src/email.js"></script>
     </body>
 </html>

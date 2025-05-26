@@ -60,7 +60,7 @@ function moveCamera() {
     // y function 
     if (0 <= t && t < moonTransition) {
         y = a * Math.sqrt(((z - c)**2) + 4) + d;
-    } else {
+    } else if (spaceTransition <= t) {
         y = -24;
     }
     camera1.position.set(x, y, z);
