@@ -9,10 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^6.3.1"
+    "vite": "^6.4.1"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "emailjs": "^4.0.3",
     "lunarphase-js": "^2.0.3",
     "three": "^0.176.0"
   }
