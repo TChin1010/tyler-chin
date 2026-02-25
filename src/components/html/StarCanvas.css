@@ -1,0 +1,8 @@
+.Star-Canvas {
+	display: block; /* Removes the 4px bottom gap */
+	position: fixed; /* Pulls them out of the document flow */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

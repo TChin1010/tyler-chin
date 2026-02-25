@@ -26,7 +26,8 @@ export function Box({onFrame , color, shapeArgs, ...rest}: meshProps) {
     return (
         <mesh ref={ref} {...rest}>
             <boxGeometry args={shapeArgs as ConstructorParameters<typeof THREE.BoxGeometry>} />
-            <meshBasicMaterial color={color} />
+            <meshBasicMaterial color={color} transparent opacity={0.5} blending={THREE.AdditiveBlending} 
+  depthWrite={false}/>
         </mesh>
     )
 }
@@ -50,7 +51,8 @@ export function Sphere({onFrame, color, shapeArgs, ...rest}: meshProps) {
     return (
         <mesh ref={ref} {...rest}>
             <sphereGeometry args={shapeArgs as ConstructorParameters<typeof THREE.SphereGeometry>} />
-            <meshBasicMaterial color={color} />
+            <meshBasicMaterial color={color} transparent opacity={0.5} blending={THREE.AdditiveBlending} 
+  depthWrite={false}/>
         </mesh>
     )
 }
@@ -74,7 +76,8 @@ export function Ring({onFrame, color, shapeArgs, ...rest}: meshProps) {
     return (
         <mesh ref={ref} {...rest}>
             <torusGeometry args={shapeArgs as ConstructorParameters<typeof THREE.TorusGeometry>} />
-            <meshBasicMaterial color={color} />
+            <meshBasicMaterial color={color} transparent opacity={0.5} blending={THREE.AdditiveBlending} 
+  depthWrite={false}/>
         </mesh>
     )
 }

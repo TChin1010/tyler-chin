@@ -1,27 +1,17 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react'
-import { Canvas, useThree, useFrame } from '@react-three/fiber'
-import Background from '../widgets/background'
+import React from 'react'
+import SpaceCanvas from '../components/html/SpaceCanvas'
+import StarCanvas from '../components/html/StarCanvas'
 
+import { useTranslation } from 'react-i18next'
 import './Home.css'
 
-function Camera() {
-    const { camera } = useThree()
-
-    useFrame(() => {
-        camera.position.set(0, 0, 0)
-        camera.lookAt(0, 0, 1)
-    })
-
-    return null
-}
-
 export default function Home() {
+    const { t } = useTranslation()
     return (
-        <>
-            <Canvas className = "blurred-canvas">
-                <Camera></Camera>
-                <Background></Background>
-            </Canvas>
+        <>  
+        <div className="test">{t("welcome")}</div>
+        <SpaceCanvas />
+        <StarCanvas />
         </>
     )
 }
