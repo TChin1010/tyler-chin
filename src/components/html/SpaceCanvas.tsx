@@ -8,7 +8,7 @@ import {
 import './SpaceCanvas.css'
 
 // parameters for shape movement
-const MAX_SPEED = [0.1, 0.15]
+const MAX_SPEED = [0.05, 0.1]
 
 function randRange(min: number, max: number) {
 	return Math.random() * (max - min) + min
@@ -34,7 +34,7 @@ const initialize = () => {
 		memo.CIRCLE.push({
 			x: randRange(0, maxWidth),
 			y: randRange(0, maxHeight),
-			radius: randRange(30, 400),
+			radius: randRange(200, 400),
 			vel_x_dir: Math.sin(randRange(0, Math.PI * 2)),
 			vel_y_dir: Math.cos(randRange(0, Math.PI * 2)),
 			vel_mag: randRange(MAX_SPEED[0], MAX_SPEED[1]),
@@ -47,11 +47,11 @@ const initialize = () => {
 		memo.CIRCLE.push({
 			x: randRange(0, maxWidth),
 			y: randRange(0, maxHeight),
-			radius: randRange(30, 50),
+			radius: randRange(100, 200),
 			vel_x_dir: Math.sin(randRange(0, Math.PI * 2)),
 			vel_y_dir: Math.cos(randRange(0, Math.PI * 2)),
 			vel_mag: randRange(MAX_SPEED[0], MAX_SPEED[1]),
-			fillStyle: 'rgba(59, 21, 97, 0.4)' as string,
+			fillStyle: 'rgba(59, 21, 97, 0.1)' as string,
 		})
 	}
 
@@ -60,7 +60,7 @@ const initialize = () => {
 		memo.CIRCLE.push({
 			x: randRange(0, maxWidth),
 			y: randRange(0, maxHeight),
-			radius: randRange(30, 100),
+			radius: randRange(40, 50),
 			vel_x_dir: Math.sin(randRange(0, Math.PI * 2)),
 			vel_y_dir: Math.cos(randRange(0, Math.PI * 2)),
 			vel_mag: randRange(MAX_SPEED[0], MAX_SPEED[1]),
@@ -99,6 +99,9 @@ const render = (
 	delta: number,
 	shapes: ShapesMemo,
 ) => {
+	if(delta > 64) {
+		delta = 16
+	}
 	const macros = getComputedStyle(document.documentElement)
 	const maxWidth = document.documentElement.clientWidth
 	const maxHeight = document.documentElement.clientHeight

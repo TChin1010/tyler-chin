@@ -4,4 +4,5 @@
     position: fixed;
     inset: 0;
     filter: blur(75px);
+    z-index: 1;
 }
