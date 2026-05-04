@@ -1,26 +1,20 @@
-import React, { useEffect, useRef } from 'react'
-import './div.css'
-
-interface DivGridProps {
-    style?: React.CSSProperties,
-    className?: string,
-    children?: React.ReactNode,
-    id?: string
-}
-
-
 /**
- * This function creates a regular div
- * 
- * Default style is provided in div.css but NOT # of columns or rows.
- * 
- * @param props stores the attributes for a div HTML attribute
- * 
- * @returns a grid div 
+ * @fileoverview A div componentized
  */
-export default function Div(props: DivGridProps) {
-    const {children, className, id, style} = props
-    return <div className={className} id={id} style={{...style}}>
-                {children}
-            </div>
+import React from 'react';
+import './Div.css'
+
+type divProps = React.HTMLAttributes<HTMLDivElement>
+
+export function Div({children, className, id, ...props} : divProps) {
+    return (
+        <div 
+        className={`default-div${className ? ` ${className}` : ''}`} 
+        id={`${id ? `${id}` : ''}`}>
+            {children}
+        </div>
+
+    );
 }
+
+export default Div;

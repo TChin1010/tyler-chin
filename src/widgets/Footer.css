@@ -1,0 +1,9 @@
+.footer {
+  margin: var(--default-margins);
+  height: 100px;
+  min-height: 100px;
+
+  border-radius: var(--default-boarder-radius);
+  background-color: var(--background-primary-complementary);
+  color: white;
+}

@@ -1,25 +1,21 @@
-import React from 'react'
-import SpaceCanvas from '../components/html/SpaceCanvas'
-import StarCanvas from '../components/html/StarCanvas'
-import Header from '../widgets/header'
-
-import { useTranslation } from 'react-i18next'
-
+import React, { useEffect, useState } from 'react';
+import Footer from '../widgets/Footer';
+import Header from '../widgets/header';
+import HomeMain from '../widgets/HomeMain';
+import PlaylistBar from '../widgets/PlaylistBar';
 import './Home.css'
-
-
+import Div from '../components/html/Div';
 
 export default function Home() {
-    const { t } = useTranslation()
-    const welcomeDivStyle = {
-        height: "100px",
-    }
+
     return (
-        <>  
-        <SpaceCanvas />
-        <StarCanvas />
-        <Header></Header>
-        <div style={{height: '1000px'}}></div>
-        </>
+        <Div id='home-container'>  
+            <Header />
+            <Div id='content-container'>
+                <PlaylistBar />
+                <HomeMain />
+            </Div>
+            <Footer />
+        </Div>
     )
 }

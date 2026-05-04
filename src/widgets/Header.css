@@ -1,0 +1,9 @@
+.header {
+    margin: var(--default-margins);
+    height: 50px;
+    min-height: 50px;
+
+    border-radius: var(--default-boarder-radius);
+    background-color: var(--background-primary-complementary);
+    color: white;
+}

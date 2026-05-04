@@ -1,15 +1,23 @@
 :root {
-  --primary-background-color: hsl(272, 32%, 10%);
-  --secondary-background-color: hsl(277, 38%, 13%, 0.7);
-  --language-dropdown-bg: hsla(293, 42%, 24%, 0.7);
-   --language-dropdown-selected: hsl(277, 38%, 13%, 0.7);
+	--background-color: hsl(254, 50%, 21%);
+	--background-primary-complementary:  hsl(240, 37%, 29%);;
+	--primary-accent: white;
+	--default-boarder-radius: 8px;
+	--default-margins: 15px
 }
 
 body, html #root{
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: var(--background-color);
+}
 
-  background-color: var(--primary-background-color);
+h3 {
+	color: var(--primary-accent);
+}
+
+p {
+	color: var(--primary-accent);
 }
