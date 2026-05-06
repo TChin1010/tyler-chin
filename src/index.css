@@ -1,9 +1,12 @@
 :root {
 	--background-color: hsl(254, 50%, 21%);
-	--background-primary-complementary:  hsl(240, 37%, 29%);;
+	--background-primary-complementary:  hsl(240, 37%, 29%);
 	--primary-accent: white;
+	--scrollbar-color:  hsla(209, 25%, 52%, 0.347);;
 	--default-boarder-radius: 8px;
-	--default-margins: 15px
+	--default-margins: 15px;
+	--side-margins: 30px;
+	--scrollbar-width: 15px;
 }
 
 body, html #root{
@@ -14,10 +17,17 @@ body, html #root{
 	background-color: var(--background-color);
 }
 
-h3 {
+h3, h2, h1 {
 	color: var(--primary-accent);
 }
 
 p {
 	color: var(--primary-accent);
+}
+
+hr {
+	margin: 0;
+	padding-left: var(--default-margins);
+	border: none;
+  	border-top: 2px solid color-mix(in srgb, var(--background-primary-complementary) 20%, hsl(254, 50%, 21%));
 }

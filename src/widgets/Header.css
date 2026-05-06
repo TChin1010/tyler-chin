@@ -1,9 +1,19 @@
 .header {
     margin: var(--default-margins);
-    height: 50px;
-    min-height: 50px;
-
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    min-height: 60px;
     border-radius: var(--default-boarder-radius);
     background-color: var(--background-primary-complementary);
     color: white;
+}
+
+.header h2, h3 {
+    margin: 0 var(--side-margins) 0 var(--side-margins); 
+    align-self: center;
+}
+
+.header h3 {
+    color: hsl(138, 51%, 53%);
 }

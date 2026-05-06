@@ -1,5 +1,4 @@
-.default-div {
-}
+.default-div{}
 
 #home-container {
     display: flex;
@@ -29,19 +28,42 @@
     background-color: var(--background-primary-complementary);
     border-radius: var(--default-boarder-radius);
     width: 400px;
+    scrollbar-gutter: stable;
     overflow-y: auto;
     overflow-x: hidden;
+    padding-left: var(--default-margins);
     min-height: 0;
+}
+
+#playlist-bar::-webkit-scrollbar {
+  	width: var(--scrollbar-width);
+}
+
+#playlist-bar::-webkit-scrollbar-track {
+  	background: transparent;
+}
+
+#playlist-bar::-webkit-scrollbar-thumb {
+    background: transparent;
+
+}
+
+#playlist-bar:has(#playlist:hover)::-webkit-scrollbar-thumb,
+#playlist-bar:has(h2:hover)::-webkit-scrollbar-thumb,
+#playlist-bar:has(hr:hover)::-webkit-scrollbar-thumb,
+#playlist-bar::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-color);
 }
 
 #playlist {
     display: flex;
     flex-direction: row;
+    width: auto;
+    box-sizing: border-box;
     height: 100px;
-    margin: var(--default-margins);
-    margin-left: calc(var(--default-margins) + 3px  );
+   
     transition: transform 0.2s ease, background-color 0.2s ease;
-    transform-origin: left;
+    transform-origin: left center;
 }
 
 #playlist:hover {

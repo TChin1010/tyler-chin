@@ -2,7 +2,7 @@
  * @fileoverview Contains parts of the footer
  */
 import React from 'react';
-import './Footer.css'
+import './Footer.css';
 
 export function Footer() {
     return (

@@ -1,12 +1,17 @@
 #playlist-title-desc {
     box-sizing: border-box;
-    padding: var(--default-margins);
     padding: 0;
     height: 100%;
     width: auto;
     align-content: center;
 }
+
 #playlist-title-desc p, h3 { 
     margin: 0; 
     align-items: center;
+}
+
+#playlist-bar-h2 { 
+    padding: var(--default-margins);
+    margin: 0;
 }
