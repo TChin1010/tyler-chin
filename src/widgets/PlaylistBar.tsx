@@ -3,21 +3,26 @@
  */
 import React from 'react';
 import Div from '../components/html/Div';
-import './PlaylistBar.css';
 import Playlist from './Playlist';
 import { useTranslation } from 'react-i18next';
+import { View } from '../pages/Home';
+import './PlaylistBar.css';
 
-export function PlaylistBar() {
+type PlaylistBarProps = {
+    onSelect: (view: View) => void;
+};
+
+export function PlaylistBar({ onSelect }: PlaylistBarProps) {
     const { t } = useTranslation("Playlist"); 
     return (
         <Div id='playlist-bar'>
             <h2 id='playlist-bar-h2'>My Playlists</h2>
             <hr/>
-            <Playlist src={'public/assets/black.png'} title={t('projectsTitle')} desc={t('projectsDesc')}/>
-            <Playlist src={'public/assets/black.png'} title={t('aboutMeTitle')} desc={t('aboutMeDesc')}/>
-            <Playlist src={'public/assets/black.png'} title={t('contactMeTitle')} desc={t('contactMeDesc')}/>
-            <Playlist src={'public/assets/black.png'} title={t('tylersFoodReviewTitle')} desc={t('tylersFoodReviewDesc')}/>
-            <Playlist src={'public/assets/black.png'} title={t('myFavouriteMusicTitle')} desc={t('myFavouriteMusicDesc')}/>
+            <Playlist onClick={() => onSelect('projects')} src={'public/assets/black.png'} title={t('projectsTitle')} desc={t('projectsDesc')}/>
+            <Playlist onClick={() => onSelect('about')} src={'public/assets/black.png'} title={t('aboutMeTitle')} desc={t('aboutMeDesc')}/>
+            <Playlist onClick={() => onSelect('contact')} src={'public/assets/black.png'} title={t('contactMeTitle')} desc={t('contactMeDesc')}/>
+            <Playlist onClick={() => onSelect('music')} src={'public/assets/black.png'} title={t('tylersFoodReviewTitle')} desc={t('tylersFoodReviewDesc')}/>
+            <Playlist onClick={() => onSelect('food')} src={'public/assets/black.png'} title={t('myFavouriteMusicTitle')} desc={t('myFavouriteMusicDesc')}/>
 
         </Div>
 

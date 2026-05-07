@@ -1,4 +1,21 @@
-.default-div{}
+
+.main-content {
+    background-color: var(--background-primary-complementary);  
+    padding: 0 var(--default-margins) 0 var(--default-margins);
+    border-radius: var(--default-boarder-radius);
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+.backgrond-color-container {
+    background-color: var(--background-color);  
+    padding: var(--default-margins);
+    border-radius: var(--default-boarder-radius);
+    
+}
 
 #home-container {
     display: flex;
@@ -35,19 +52,7 @@
     min-height: 0;
 }
 
-#playlist-bar::-webkit-scrollbar {
-  	width: var(--scrollbar-width);
-}
-
-#playlist-bar::-webkit-scrollbar-track {
-  	background: transparent;
-}
-
-#playlist-bar::-webkit-scrollbar-thumb {
-    background: transparent;
-
-}
-
+/* Ensures that scroll bar is visible when hovering*/
 #playlist-bar:has(#playlist:hover)::-webkit-scrollbar-thumb,
 #playlist-bar:has(h2:hover)::-webkit-scrollbar-thumb,
 #playlist-bar:has(hr:hover)::-webkit-scrollbar-thumb,
@@ -68,6 +73,20 @@
 
 #playlist:hover {
   opacity: 0.8;
+  background-color: color-mix(in srgb, var(--background-color) 60%, white 20%);
   transform: scale(1.05);
   cursor: pointer;
+}
+
+#music-project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#music-project {
+    width: 150px;
+    height: 200px;
+    margin: var(--default-margins);
 }

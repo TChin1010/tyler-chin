@@ -24,18 +24,26 @@ const options: Option[]= [
  * @returns An HTML dom element for the header
  */
 export function Header() {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation("Header");
     const [selectedOption, setOption] = useState<Option | null>(options.find(o => o.value === i18n.language) ?? null);
+
+    const selectLanguage = (option: Option | null) => {
+        if (option) {
+            i18n.changeLanguage(option.value.toString());
+            setOption(option);
+        }
+    };
 
     return (
         <header className={'header'}>
-            <h2>Tyler Chin</h2>
-            <h3> Currently searching for an internship</h3>
+            <h2>{t('name')}</h2>
+            <h3>{t('status')}</h3>
             <Select
+                isSearchable={false}
                 styles={DefaultStyle}
                 value={selectedOption}
                 options={options}
-                onChange={setOption}
+                onChange={selectLanguage}
             />
         </header>
 

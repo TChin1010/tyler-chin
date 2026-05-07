@@ -9,7 +9,8 @@ type divProps = React.HTMLAttributes<HTMLDivElement>
 export function Div({children, className, id, ...props} : divProps) {
     return (
         <div 
-        className={`default-div${className ? ` ${className}` : ''}`} 
+        {...props}
+        className={`${className ? ` ${className}` : 'default-div'}`} 
         id={`${id ? `${id}` : ''}`}>
             {children}
         </div>

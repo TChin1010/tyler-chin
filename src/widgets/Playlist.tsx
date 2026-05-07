@@ -8,7 +8,9 @@ import './Playlist.css';
 type PlaylistProps = {
   title?: string;
   desc?: string;
-  src?: string
+  src?: string;
+  onClick?: () => void;
+
 };
 
 /**
@@ -20,10 +22,9 @@ type PlaylistProps = {
  * @param desc The description of the playlist
  * @returns An HTMl dom element that represents a playlist
  */
-
-export function Playlist({src, title, desc} : PlaylistProps) {
+export function Playlist({src, title, desc, onClick} : PlaylistProps) {
     return (
-        <Div id='playlist'>
+        <Div id='playlist' onClick={onClick}>
             <img src={src} alt="Image loading error"></img>
             <div id='playlist-title-desc'>
                 <h3> {title} </h3>

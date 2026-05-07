@@ -31,3 +31,15 @@ hr {
 	border: none;
   	border-top: 2px solid color-mix(in srgb, var(--background-primary-complementary) 20%, hsl(254, 50%, 21%));
 }
+
+::-webkit-scrollbar {
+  	width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  	background: transparent;
+}
+:-webkit-scrollbar-thumb {
+    background: transparent;
+
+}

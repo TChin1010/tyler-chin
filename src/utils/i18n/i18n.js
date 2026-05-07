@@ -9,7 +9,7 @@ i18n.use(HttpBackend)
     .init({
         debug: import.meta.VITE_DEBUG === 'true',
         fallbackLng: "en",
-        ns: ["Common", "Playlist"], // Specify the types of individual files 
+        ns: ["Common", "Playlist", "Header"], // Specify the types of individual files 
         defaultNS: "Common",
         backend: {
             loadPath: "/locales/{{lng}}/{{ns}}.json" // How to find them
