@@ -3,20 +3,21 @@
  */
 import React from 'react';
 import Div from '../components/html/Div';
+import './Music.css'
 
 type MusicProps = {
-  title?: string;
-  desc?: string;
+  children: string;
   src?: string;
-  onClick?: () => void;
 
 };
 
-
-export function Music() {
+export function Music({src, children,}: MusicProps) {
     return (
         <Div className='backgrond-color-container' id='music-project'>
-                sda
+            <img id='album-cover' src={src} alt="Image loading error"></img>
+                <h3 style={{ textAlign: 'left', width: "100%", paddingLeft: "var(--default-margins)" }}>
+                    {children}
+                </h3>
         </Div>
 
     );

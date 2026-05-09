@@ -1,0 +1,8 @@
+#album-cover {
+    max-width: auto;
+    max-height: 70%;
+    aspect-ratio: 1 / 1;
+    margin: var(--default-margins);
+    align-self: center;
+    border-radius: var(--default-boarder-radius);
+}

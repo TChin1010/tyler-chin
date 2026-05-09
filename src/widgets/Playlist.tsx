@@ -25,7 +25,7 @@ type PlaylistProps = {
 export function Playlist({src, title, desc, onClick} : PlaylistProps) {
     return (
         <Div id='playlist' onClick={onClick}>
-            <img src={src} alt="Image loading error"></img>
+            <img src={src} alt="Image loading error" id='playlist-cover'></img>
             <div id='playlist-title-desc'>
                 <h3> {title} </h3>
                 <p> {desc} </p>

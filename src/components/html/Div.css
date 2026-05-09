@@ -9,7 +9,6 @@
 }
 
 
-
 .backgrond-color-container {
     background-color: var(--background-color);  
     padding: var(--default-margins);
@@ -73,7 +72,7 @@
 
 #playlist:hover {
   opacity: 0.8;
-  background-color: color-mix(in srgb, var(--background-color) 60%, white 20%);
+  background-color: color-mix(in srgb, var(--background-color) 10%, white 10%);
   transform: scale(1.05);
   cursor: pointer;
 }
@@ -88,5 +87,13 @@
 #music-project {
     width: 150px;
     height: 200px;
+    display: flex;
+    flex-direction: column;
     margin: var(--default-margins);
+    transition: transform 0.2s ease;
+}
+
+#music-project:hover {
+    transform:scale(1.05);
+    background-color: color-mix(in srgb, var(--background-color) 10%, white 10%);
 }

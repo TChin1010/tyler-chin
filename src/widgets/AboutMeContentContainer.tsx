@@ -2,14 +2,14 @@
  * @fileoverview Contains parts of the footer
  */
 import React from 'react';
-import './Footer.css';
 import Div from '../components/html/Div';
+import PlaylistHeader from './PlaylistHeader';
+import './Footer.css';
 
 export function AboutMeContentContainer() {
     return (
                <Div className='main-content'>
-                   <h1>All about me!</h1>
-                   <hr></hr>
+                   <PlaylistHeader title={'About Me'} playlistCover={'public/assets/black.png'}> 4 projects saved</PlaylistHeader>
                </Div>
 
     );
