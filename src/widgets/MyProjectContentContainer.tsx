@@ -2,7 +2,6 @@
  * @fileoverview Contains parts of the footer
  */
 import React from 'react';
-import './Footer.css';
 import Div from '../components/html/Div';
 import Music from './Music';
 import PlaylistHeader from './PlaylistHeader';

@@ -4,7 +4,6 @@
 import React from 'react';
 import Div from '../components/html/Div';
 import PlaylistHeader from './PlaylistHeader';
-import './Footer.css';
 
 export function AboutMeContentContainer() {
     return (

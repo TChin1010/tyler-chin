@@ -3,13 +3,10 @@
  */
 import React from 'react';
 
-export function MusicStatus() {
+export function MusicController() {
     return (
-        <Div>
-            
-        </Div>
-
+        <></>
     );
 }
 
-export default MusicStatus;
+export default MusicController;
