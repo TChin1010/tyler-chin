@@ -57,6 +57,7 @@
 #playlist-bar:has(hr:hover)::-webkit-scrollbar-thumb,
 #playlist-bar::-webkit-scrollbar-thumb:hover {
     background: var(--scrollbar-color);
+    border-radius: var(--default-boarder-radius);
 }
 
 #playlist {

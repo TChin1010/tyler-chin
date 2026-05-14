@@ -1,0 +1,11 @@
+#songTitle {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--default-margins);
+    margin-bottom: var(--default-margins);
+    justify-content: center;
+}
+
+#songTitle p, h3 {
+    margin: 0;
+}
