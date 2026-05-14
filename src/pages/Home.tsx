@@ -6,6 +6,7 @@ import MyProjectContentContainer from '../widgets/MyProjectContentContainer';
 import AboutMeContentContainer from '../widgets/AboutMeContentContainer';
 import Div from '../components/html/Div';
 import './Home.css';
+import ClickToStart from '../widgets/ClickToStart';
 
 export type View = 'projects' | 'about' | 'contact' | 'music' | 'food';
 
@@ -13,14 +14,17 @@ export default function Home() {
     const [activeContent, setActiveContent] = useState<View>('projects')
 
     return (
-        <Div id='home-container'>  
-            <Header />
-            <Div id='content-container'>
-                <PlaylistBar onSelect={setActiveContent} />
-                {activeContent === 'projects' && <MyProjectContentContainer />}
-                {activeContent === 'about' && <AboutMeContentContainer />}
+        <>
+            <ClickToStart></ClickToStart>
+            <Div id='home-container'>  
+                <Header />
+                <Div id='content-container'>
+                    <PlaylistBar onSelect={setActiveContent} />
+                    {activeContent === 'projects' && <MyProjectContentContainer />}
+                    {activeContent === 'about' && <AboutMeContentContainer />}
+                </Div>
+                <Footer />
             </Div>
-            <Footer />
-        </Div>
+        </>
     )
 }

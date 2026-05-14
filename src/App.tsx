@@ -1,14 +1,15 @@
 import React from 'react';
 import Home from './pages/Home';
+import LoadingScreen from './widgets/LoadingScreen';
+import { AudioPlayerProvider } from 'react-use-audio-player';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MusicProvider } from "./utils/contexts/MusicContext";
 import './App.css';
-import { AudioPlayerProvider } from 'react-use-audio-player';
 
 
 function App() {
 	return (
-		<React.Suspense fallback="loading">
+		<React.Suspense fallback={<LoadingScreen color='white'/>}>
 			<AudioPlayerProvider>
 				<MusicProvider>
 					<Router>
