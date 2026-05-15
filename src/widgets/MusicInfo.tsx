@@ -17,7 +17,7 @@ export function MusicInfo() {
     useEffect(() => {
         async function readMetaData() {
 
-            const audioUrl = new URL('../assets/music/mondamusic-lofi-lofi-girl-lofi-chill-512853.mp3', import.meta.url).href;
+            const audioUrl = new URL(peek(), import.meta.url).href;
 
             const response = await fetch(audioUrl);
             const blob = await response.blob();
@@ -38,7 +38,7 @@ export function MusicInfo() {
                 <h3> {title} </h3>
                 <p> {author} </p>
             </Div>
-            <img id='album-cover' src={'public/assets/black.png'} alt="Image loading error"></img>
+            <img id='album-cover' src={'/assets/black.png'} alt="Image loading error"></img>
         </Div>
     );
 }

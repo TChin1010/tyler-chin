@@ -11,7 +11,6 @@ import Div from '../components/html/Div';
 
 
 export function MusicController() {
-    const musicFolder = '/public/Music';
     const { load, isLooping, isPlaying, pause, play, setVolume, volume } = useAudioPlayerContext();
     const { setCurrentSong } = useMusic();
     
@@ -45,8 +44,15 @@ export function MusicController() {
 
 
     useEffect(() => {
-        const filesMetaData = import.meta.glob('/src/assets/music/*');
-        addList(Object.keys(filesMetaData));
+       const musicModules = import.meta.glob(
+        '/src/assets/music/*',
+        {
+            eager: true,
+            import: 'default'
+        }
+        );
+
+        addList(Object.values(musicModules));
         const saved = localStorage.getItem("volume");
         if (saved !== null) {
             setVolume(Number(saved));

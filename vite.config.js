@@ -1,8 +1,7 @@
-/**
- * @type {import('vite'.UserConfig)}
- */
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-export default {
-    base: process.env.NODE_ENV === 'production' ?
-    'tyler-chin' : ''
-}
+export default defineConfig({
+  plugins: [react()],
+  base: process.env.VITE_BASE_PATH || "/",
+});

@@ -5,7 +5,6 @@ let history: string[] = []
 const MAX_LENGTH: number = 400;
 
 function debug() {
-    return;
     if (import.meta.env.DEV) {
         console.log("queue" + queue);
         console.log("history" + history);
