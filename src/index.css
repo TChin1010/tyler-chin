@@ -23,6 +23,7 @@ h3, h2, h1 {
 
 p {
 	color: var(--primary-accent);
+	font-size: 14px;
 }
 
 hr {
@@ -38,8 +39,12 @@ hr {
 
 ::-webkit-scrollbar-track {
   	background: transparent;
+	backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
 }
-:-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: transparent;
+	transition: background 0.2s ease;
 
 }

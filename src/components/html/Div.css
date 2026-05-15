@@ -4,9 +4,31 @@
     padding: 0 var(--default-margins) 0 var(--default-margins);
     border-radius: var(--default-boarder-radius);
     flex: 1;
-    overflow-y: auto;
+    scrollbar-gutter: stable;
+    overflow-y: hidden; 
     overflow-x: hidden;
+
+    padding-left: var(--default-margins);
+
+    padding-right: var(--default-margins); 
 }
+
+/* 1. Bring back overflow capability ONLY when the container is explicitly hovered */
+.main-content:hover {
+    overflow-y: auto;
+}
+
+/* 2. Keep your default thumb styling hidden, relying on the overflow swap above */
+.main-content::after {
+    background: transparent;
+    border-radius: var(--default-boarder-radius);
+}
+
+.main-content:hover::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border-radius: var(--default-boarder-radius);
+}
+
 
 
 .backgrond-color-container {
@@ -45,30 +67,43 @@
     border-radius: var(--default-boarder-radius);
     width: 400px;
     scrollbar-gutter: stable;
-    overflow-y: auto;
+    
+    overflow-y: hidden; 
     overflow-x: hidden;
+    
     padding-left: var(--default-margins);
+
+    padding-right: var(--default-margins); 
     min-height: 0;
 }
 
-/* Ensures that scroll bar is visible when hovering*/
-#playlist-bar:has(#playlist:hover)::-webkit-scrollbar-thumb,
-#playlist-bar:has(h2:hover)::-webkit-scrollbar-thumb,
-#playlist-bar:has(hr:hover)::-webkit-scrollbar-thumb,
-#playlist-bar::-webkit-scrollbar-thumb:hover {
-    background: var(--scrollbar-color);
+/* 1. Bring back overflow capability ONLY when the container is explicitly hovered */
+#playlist-bar:hover {
+    overflow-y: auto;
+}
+
+/* 2. Keep your default thumb styling hidden, relying on the overflow swap above */
+#playlist-bar::-webkit-scrollbar-thumb {
+    background: transparent;
     border-radius: var(--default-boarder-radius);
+}
+
+#playlist-bar:hover::-webkit-scrollbar-thumb {
+    border-radius: var(--default-boarder-radius);
+    background: var(--scrollbar-color);
 }
 
 #playlist {
     display: flex;
     flex-direction: row;
-    width: auto;
+    width: 95%;
     box-sizing: border-box;
+    margin-top: 10px;
     height: 100px;
-   
+    border-radius: 5px;
     transition: transform 0.2s ease, background-color 0.2s ease;
     transform-origin: left center;
+    gap: 5px;
 }
 
 #playlist:hover {

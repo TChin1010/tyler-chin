@@ -15,6 +15,7 @@ export function MyProjectContentContainer() {
                 <Music src={'/assets/black.png'}>Pantry Pal</Music>
                 <Music src={'/assets/black.png'}>Stock Predictor</Music>
                 <Music src={'/assets/black.png'}>Assembly Tetris</Music>
+                <Music src={'/assets/black.png'}>Assembly Tetris</Music>
             </Div>
         </Div>
 

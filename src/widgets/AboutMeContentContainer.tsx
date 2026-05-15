@@ -7,9 +7,9 @@ import PlaylistHeader from './PlaylistHeader';
 
 export function AboutMeContentContainer() {
     return (
-               <Div className='main-content'>
-                   <PlaylistHeader title={'About Me'} playlistCover={'/assets/black.png'}> 4 projects saved</PlaylistHeader>
-               </Div>
+        <Div className='main-content'>
+            <PlaylistHeader title={'About Me'} playlistCover={'/assets/black.png'}> 4 projects saved</PlaylistHeader>
+        </Div>
 
     );
 }
